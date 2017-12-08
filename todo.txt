@@ -1,0 +1,15 @@
+dpkg -V
+who
+last
+#Find IP, replace XX with last ip byte
+#Find IPADDR, replace with full ip
+#load in local inject
+#copy zone file
+service bind9 reload
+#copy over default.ssl.conf
+ln -s /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-endabled/piXX.krocorp.com.ssl.conf
+# a2enmod ssl
+# copy piXX.krocorp.com into apache
+a2ensite piXX.krocorp.com 
+
+find . -perm /a+s -perm /a+x >expectedPerms.txt

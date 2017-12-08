@@ -1,0 +1,5 @@
+zone "piXX.krocorp.com." {
+	type master;
+	file "/etc/bind/db.krocorp"
+	allow-query { any; } ;
+};
